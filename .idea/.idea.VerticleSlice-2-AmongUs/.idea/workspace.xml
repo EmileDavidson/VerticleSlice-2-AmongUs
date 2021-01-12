@@ -20,16 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f21efe97-f825-45c7-ac8e-acd6858bdd47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/Client.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManagerAmongUs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManagerAmongUs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy - Copy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy - Copy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +56,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterCustomization.cs" />
         <option value="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkServer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Server.cs" />
-        <option value="$PROJECT_DIR$/Assets/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCustomizer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CustomButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RaycastButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Server.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -113,6 +119,8 @@
       <workItem from="1610198589409" duration="1708000" />
       <workItem from="1610214113338" duration="2537000" />
       <workItem from="1610284148922" duration="10162000" />
+      <workItem from="1610363909435" duration="4597000" />
+      <workItem from="1610441556705" duration="18732000" />
     </task>
     <servers />
   </component>
@@ -137,14 +145,15 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1610022764244">
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1610456107571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610022764244" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1610286238024">
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610456107571" />
+    <state x="2036" y="117" width="1688" height="806" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610445751921" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1610447099958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610286238024" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610447099958" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610198930796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

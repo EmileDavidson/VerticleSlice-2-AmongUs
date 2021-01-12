@@ -7,25 +7,29 @@ using UnityEngine.UIElements;
 
 public class MyNetworkManager : NetworkManager
 {
+    [SerializeField] private GameObject serverObj;
     public override void OnStartServer()
     {
         base.OnStartServer();
-        print("Server Started");
+        GameObject server = Instantiate(serverObj);
+        server.name = "Server";
+        print("<COLOR=GREEN>Server Started</COLOR>");
     }
     public override void OnStopServer()
     {
         base.OnStopServer();
-        print("Server stopped");
+        print("<COLOR=RED>Server Stopped</COLOR>");
     }
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
-        print("Connected to server");
+        print("<COLOR=GREEN>Connected to server</COLOR>");
     }
     public override void OnClientDisconnect(NetworkConnection conn)
     {
         base.OnClientDisconnect(conn);
-        print("Disconnected from server");
+        print("<COLOR=RED>Disconnected from server</COLOR>");
+        //do i want to do something? like an popup?
     }
 
     public override void OnServerAddPlayer(NetworkConnection conn)
@@ -39,6 +43,6 @@ public class MyNetworkManager : NetworkManager
             ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
             : Instantiate(playerPrefab);
 
-        NetworkServer.AddPlayerForConnection(conn, player);
+         NetworkServer.AddPlayerForConnection(conn, player);
     }
 }
