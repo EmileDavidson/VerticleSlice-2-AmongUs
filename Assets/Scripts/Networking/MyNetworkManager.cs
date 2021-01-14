@@ -31,18 +31,22 @@ public class MyNetworkManager : NetworkManager
         print("<COLOR=RED>Disconnected from server</COLOR>");
         //do i want to do something? like an popup?
     }
-
+    
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         print("Create Player");
          // startPos = GetStartPosition();
          GameObject[] SpawnLocations = GameObject.FindGameObjectsWithTag("SpawnLocations");
-         Transform startPos = SpawnLocations[NetworkServer.connections.Count].transform;
+         int num = GameObject.Find("Server").GetComponent<Server>().playersInGame;
+         // Transform startPos = SpawnLocations[NetworkServer.connections.Count - 1].transform;
+         Transform startPos = SpawnLocations[num].transform;
+         
          print(startPos);
          GameObject player = startPos != null
             ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
             : Instantiate(playerPrefab);
-
+         
+         GameObject.Find("Server").GetComponent<Server>().playersInGame++;
          NetworkServer.AddPlayerForConnection(conn, player);
     }
 }

@@ -23,18 +23,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy - Copy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy - Copy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player - Copy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Server.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -53,7 +49,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/NetworkManagerAmongUs.cs" />
         <option value="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkManagerHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/Client.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterCustomization.cs" />
         <option value="$PROJECT_DIR$/Assets/Mirror/Runtime/NetworkServer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Server.cs" />
@@ -66,10 +61,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Server.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" />
       </list>
     </option>
   </component>
@@ -120,7 +117,9 @@
       <workItem from="1610214113338" duration="2537000" />
       <workItem from="1610284148922" duration="10162000" />
       <workItem from="1610363909435" duration="4597000" />
-      <workItem from="1610441556705" duration="18732000" />
+      <workItem from="1610441556705" duration="25181000" />
+      <workItem from="1610538733355" duration="1569000" />
+      <workItem from="1610541712181" duration="1063000" />
     </task>
     <servers />
   </component>
@@ -150,10 +149,10 @@
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610456107571" />
     <state x="2036" y="117" width="1688" height="806" key="VCS.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1610445751921" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1610447099958">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1610464133183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610447099958" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1610464133183" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610198930796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -272,6 +272,7 @@
             <e p="MyNetworkManager.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />
+          <e p="PlayerData.cs" t="Include" />
           <e p="PlayerDataBeforeJoin.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
         </e>
