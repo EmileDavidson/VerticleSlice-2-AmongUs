@@ -6,6 +6,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     [SerializeField] private NetworkManager networkManager;
+    [SerializeField] private GameObject inputField1;
     public void DeActive(GameObject obj)
     {
         obj.SetActive(false);
@@ -16,11 +17,26 @@ public class CanvasManager : MonoBehaviour
         obj.SetActive(true);
     }
 
-    public void startLocalHost()
+    public void StartLocalHost()
     {
+        if (GameObject.Find("PlayerDataBeforeJoin").GetComponent<PlayerDataBeforeJoin>().playername.Trim() == "" )
+        {
+            inputField1.GetComponent<Animator>().SetBool("NameIsEmpty", true);
+            return;
+        }
         networkManager.StartHost();
     }
 
+    public void StartClient()
+    {
+        if (GameObject.Find("PlayerDataBeforeJoin").GetComponent<PlayerDataBeforeJoin>().playername.Trim() == "" )
+        {
+            inputField1.GetComponent<Animator>().SetBool("NameIsEmpty", true);
+            return;
+        }
+        networkManager.StartClient();
+    }
+    
     public void CloseGame()
     {
         Application.Quit();

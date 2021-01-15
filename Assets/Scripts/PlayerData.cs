@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using UnityEngine;
 using Mirror;
 
@@ -10,13 +11,13 @@ public class PlayerData : NetworkBehaviour
     public Material playerMaterialClone;
     
     [SyncVar] public float speed;
-    [SyncVar] public List<Color> colors = new List<Color>();
-    
     [SyncVar(hook = nameof(OnNameChanged))]
     public string playerName;
     [SyncVar(hook = nameof(OnColorChanged))]
     public Color playerColor = Color.white;
-
+    [SyncVar] public bool canMove = true;
+    [SyncVar] public List<Color> colors = new List<Color>();
+    
     void OnNameChanged(string _Old, string _New)
     {
         playerNameText.text = _New;
@@ -39,7 +40,6 @@ public class PlayerData : NetworkBehaviour
     {
         GameObject server = GameObject.Find("Server");
         if (server == null) { return; }
-        colors = server.GetComponent<Server>().GetColors();
         speed = server.GetComponent<Server>().Speed;
     }
 

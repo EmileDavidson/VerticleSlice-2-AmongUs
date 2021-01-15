@@ -18,6 +18,8 @@ public class Player : NetworkBehaviour
     {
         FixPlayerName();
         FixPlayerColor();
+        //we add this script here so its on the client only.. not on the server (because not everyone has to see this)
+        this.gameObject.AddComponent<PlayerHandler>();
     }
 
     private void FixPlayerName()
@@ -62,7 +64,7 @@ public class Player : NetworkBehaviour
         _playerData.playerColor = color;
         RpcChangeDataColor(color); //return the color back to the player so he can remember it even when leaving the game. an joining a new game
     }
-
+    
     [TargetRpc]
     public void RpcChangeDataColor(Color color)
     {

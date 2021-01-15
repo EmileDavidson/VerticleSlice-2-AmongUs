@@ -29,16 +29,13 @@ public class MyNetworkManager : NetworkManager
     {
         base.OnClientDisconnect(conn);
         print("<COLOR=RED>Disconnected from server</COLOR>");
-        //do i want to do something? like an popup?
     }
     
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         print("Create Player");
-         // startPos = GetStartPosition();
          GameObject[] SpawnLocations = GameObject.FindGameObjectsWithTag("SpawnLocations");
          int num = GameObject.Find("Server").GetComponent<Server>().playersInGame;
-         // Transform startPos = SpawnLocations[NetworkServer.connections.Count - 1].transform;
          Transform startPos = SpawnLocations[num].transform;
          
          print(startPos);

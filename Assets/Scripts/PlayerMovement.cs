@@ -21,9 +21,12 @@ public class PlayerMovement : NetworkBehaviour
 
     public void HandleMovement()
     {
-        float moveHor = Input.GetAxis("Horizontal") * _playerData.speed * Time.deltaTime;
-        float moveVer = Input.GetAxis("Vertical") * _playerData.speed * Time.deltaTime;
-        Vector3 movement = new Vector3(moveHor, moveVer, 0);
-        transform.position = transform.position + movement;
+        if (_playerData.canMove)
+        {
+            float moveHor = Input.GetAxis("Horizontal") * _playerData.speed * Time.deltaTime;
+            float moveVer = Input.GetAxis("Vertical") * _playerData.speed * Time.deltaTime;
+            Vector3 movement = new Vector3(moveHor, moveVer, 0);
+            transform.position = transform.position + movement;
+        }
     }
 }
