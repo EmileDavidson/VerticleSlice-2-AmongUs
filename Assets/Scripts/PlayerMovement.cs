@@ -8,11 +8,14 @@ using UnityEngine;
 public class PlayerMovement : NetworkBehaviour
 {
     private PlayerData _playerData;
-    [SerializeField] private GameObject textObj;
+    [SerializeField] private GameObject playerBody;
+    private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
         _playerData = GetComponent<PlayerData>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -28,22 +31,13 @@ public class PlayerMovement : NetworkBehaviour
             float moveHor = Input.GetAxis("Horizontal") * _playerData.speed * Time.deltaTime;
             float moveVer = Input.GetAxis("Vertical") * _playerData.speed * Time.deltaTime;
             Vector3 movement = new Vector3(moveHor, moveVer, 0);
-            transform.position = transform.position + movement;
-            
-            //check wich way the player is moving to
-            if (moveHor > 0)
-            {
-                //moving right
-                this.transform.rotation = new Quaternion(0, 0, 0, 0);
-                textObj.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
+            rb.transform.position = transform.position + movement;
 
-            if (moveHor < 0)
-            {
-                //moving left
-                this.transform.rotation = new Quaternion(0, 180, 0, 0);
-                textObj.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
+            if (moveHor > 0) playerBody.transform.rotation = new Quaternion(0, 0, 0, 0);
+            if (moveHor < 0) playerBody.transform.rotation = new Quaternion(0, 180, 0, 0);
+            
+            if (moveHor != 0 || moveVer != 0) { animator.SetBool("Iswalking", true); }
+            else { animator.SetBool("Iswalking", false); }
         }
     }
 }

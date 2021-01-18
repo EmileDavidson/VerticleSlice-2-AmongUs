@@ -2277,9 +2277,6 @@ MonoBehaviour:
   syncInterval: 0.1
   playername: PlayerName
   playerColor: {r: 1, g: 1, b: 1, a: 1}
-  outfit: none
-  hat: none
-  pet: none
 --- !u!4 &1524140184
 Transform:
   m_ObjectHideFlags: 0

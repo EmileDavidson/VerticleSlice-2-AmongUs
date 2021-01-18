@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using Mirror;
 
@@ -14,7 +15,8 @@ public class PlayerData : NetworkBehaviour
     [SyncVar(hook = nameof(OnNameChanged))] public string playerName;
     [SyncVar(hook = nameof(OnColorChanged))] public Color playerColor = Color.white;
     [SyncVar] public bool canMove = true;
-    [SyncVar] public List<Color> colors = new List<Color>();
+    [SyncVar] [SerializeField] public List<Color> colors = new List<Color>();
+    [SerializeField] private GameObject playerBody;
     
     void OnNameChanged(string _Old, string _New)
     {
@@ -23,9 +25,9 @@ public class PlayerData : NetworkBehaviour
 
     void OnColorChanged(Color _Old, Color _New)
     {
-        playerMaterialClone = new Material(GetComponent<Renderer>().material);
+        playerMaterialClone = new Material(playerBody.GetComponent<Renderer>().material);
         playerMaterialClone.color = _New;
-        GetComponent<Renderer>().material = playerMaterialClone;
+        playerBody.GetComponent<Renderer>().material = playerMaterialClone;
     }
     
     public override void OnStartLocalPlayer()

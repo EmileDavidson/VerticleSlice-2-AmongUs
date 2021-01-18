@@ -24,13 +24,10 @@ public class Server : NetworkBehaviour
         }
     }
 
+    [ClientRpc]
     public void UsableColorChanged(List<Color> oldcolorlist, List<Color> newcolorlist)
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject player in players)
-        {
-            player.GetComponent<PlayerData>().colors = newcolorlist;
-        }
+        print("TESTING");
     }
 
     [Server]
