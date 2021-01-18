@@ -11,10 +11,8 @@ public class PlayerData : NetworkBehaviour
     public Material playerMaterialClone;
     
     [SyncVar] public float speed;
-    [SyncVar(hook = nameof(OnNameChanged))]
-    public string playerName;
-    [SyncVar(hook = nameof(OnColorChanged))]
-    public Color playerColor = Color.white;
+    [SyncVar(hook = nameof(OnNameChanged))] public string playerName;
+    [SyncVar(hook = nameof(OnColorChanged))] public Color playerColor = Color.white;
     [SyncVar] public bool canMove = true;
     [SyncVar] public List<Color> colors = new List<Color>();
     
@@ -40,7 +38,7 @@ public class PlayerData : NetworkBehaviour
     {
         GameObject server = GameObject.Find("Server");
         if (server == null) { return; }
-        speed = server.GetComponent<Server>().Speed;
+        speed = server.GetComponent<Server>().speed;
     }
 
 }

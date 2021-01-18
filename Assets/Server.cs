@@ -5,7 +5,7 @@ using UnityEngine;
 public class Server : NetworkBehaviour
 {
     [Header("PlayerData (has to be synced with players)")]
-    [SyncVar(hook = nameof(SpeedChanged))][SerializeField] private float speed = 5;
+    [SyncVar(hook = nameof(SpeedChanged))][SerializeField] public float speed = 5;
     [SyncVar][SerializeField] private List<Color> colorList;
     [SyncVar(hook = nameof(UsableColorChanged))][SerializeField] private List<Color> usableColorList;
     [SyncVar][SerializeField] public int playersInGame;
@@ -24,21 +24,19 @@ public class Server : NetworkBehaviour
         }
     }
 
-    public void UsableColorChanged()
+    public void UsableColorChanged(List<Color> oldcolorlist, List<Color> newcolorlist)
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
-            player.GetComponent<PlayerData>().colors = usableColorList;
+            player.GetComponent<PlayerData>().colors = newcolorlist;
         }
     }
 
     [Server]
     public void ColorListRemoveColor(Color color)
     {
-        print("<COLOR=red>" + colorList.Count + "</COLOR>");
         colorList.Remove(color);
-        print("<COLOR=red>" + colorList.Count + "</COLOR>");
     }
     
     [Server]
@@ -52,15 +50,4 @@ public class Server : NetworkBehaviour
     {
         return colorList;
     }
-
-    
-    #region getters en setters
-    public float Speed
-    {
-        get => speed;
-        set => speed = value;
-    }
-    #endregion
-
-
 }

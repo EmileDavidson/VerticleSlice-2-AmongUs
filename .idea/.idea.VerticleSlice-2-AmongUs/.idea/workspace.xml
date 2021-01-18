@@ -20,19 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f21efe97-f825-45c7-ac8e-acd6858bdd47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VerticleSlice-2-AmongUs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Server.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Server.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +57,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Server.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerDataBeforeJoin.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mjuO9Gk8az86C0DyQuXV6CQ08F" />
@@ -122,6 +117,7 @@
       <workItem from="1610541712181" duration="1063000" />
       <workItem from="1610612550308" duration="67000" />
       <workItem from="1610612644140" duration="8591000" />
+      <workItem from="1610966059737" duration="1420000" />
     </task>
     <servers />
   </component>

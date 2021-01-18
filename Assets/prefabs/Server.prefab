@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4998254226300993716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5475133, y: 0.01463294, z: -0.14589767}
+  m_LocalPosition: {x: -0.5475133, y: 0.01463294, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,20 +89,5 @@ MonoBehaviour:
   - {r: 0.83683777, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.62671614, b: 0, a: 1}
   - {r: 0.4528302, g: 0.18760143, b: 0, a: 1}
-  imposters: 1
-  map: mapName
-  confirmEjects: 1
-  emergencyMeetings: 1
-  emergencyCooldown: 1
-  discussionTime: 1
-  votingTime: 1
-  anonymousVote: 0
-  crewMateVision: 1
-  imposterVision: 1
-  killCooldown: 1
-  killDistance: medium
-  visualTasks: 0
-  taskBarUpdate: meeting
-  commonTasks: 1
-  longTasks: 1
-  shortTasks: 1
+  usableColorList: []
+  playersInGame: 0
