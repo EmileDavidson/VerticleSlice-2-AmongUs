@@ -38,10 +38,10 @@ public class MyNetworkManager : NetworkManager
          int num = GameObject.Find("Server").GetComponent<Server>().playersInGame;
          Transform startPos = SpawnLocations[num].transform;
          
-         print(startPos);
          GameObject player = startPos != null
             ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
             : Instantiate(playerPrefab);
+         player.name = "Player" + num;
          
          GameObject.Find("Server").GetComponent<Server>().playersInGame++;
          NetworkServer.AddPlayerForConnection(conn, player);

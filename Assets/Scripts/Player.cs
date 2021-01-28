@@ -8,11 +8,18 @@ using Random = UnityEngine.Random;
 public class Player : NetworkBehaviour
 {
     private PlayerData _playerData;
+    public ServerToClientCommunicator serverToClientCommunicator;
 
     private void Awake()
     {
         _playerData = GetComponent<PlayerData>();
+        serverToClientCommunicator = GetComponent<ServerToClientCommunicator>();
+        foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            Physics2D.IgnoreCollision(this.GetComponent<BoxCollider2D>(), player.GetComponent<BoxCollider2D>(), true);
+        }
     }
+
 
     public override void OnStartLocalPlayer()
     {
@@ -20,6 +27,7 @@ public class Player : NetworkBehaviour
         FixPlayerColor();
         //we add this script here so its on the client only.. not on the server (because not everyone has to see this)
         this.gameObject.AddComponent<PlayerHandler>();
+        gameObject.name = "Me";
     }
 
     private void FixPlayerName()
@@ -62,12 +70,10 @@ public class Player : NetworkBehaviour
             server.GetComponent<Server>().ColorListRemoveColor(color);
         }
         _playerData.playerColor = color;
-        RpcChangeDataColor(color); //return the color back to the player so he can remember it even when leaving the game. an joining a new game
     }
     
-    [TargetRpc]
-    public void RpcChangeDataColor(Color color)
+    public void UpdateColor(List<Color> clist)
     {
-        GameObject.Find("PlayerDataBeforeJoin").GetComponent<PlayerDataBeforeJoin>().playerColor = color;
+        serverToClientCommunicator.GetComponent<ServerToClientCommunicator>().ColorListUpdate(clist);
     }
 }

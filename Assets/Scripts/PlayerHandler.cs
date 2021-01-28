@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
-public class PlayerHandler : MonoBehaviour
+public class PlayerHandler : NetworkBehaviour
 {
     [SerializeField] private GameObject pc;
     [SerializeField] private GameObject customizationMenu;
@@ -39,7 +39,6 @@ public class PlayerHandler : MonoBehaviour
         if (pc != null)
         {
             double distance = Vector2.Distance(pc.transform.position, this.transform.position);
-            print(distance);
             if (distance < 2)
             {
                 DisableAllUserinterfaceButtons();

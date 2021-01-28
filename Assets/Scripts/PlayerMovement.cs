@@ -22,6 +22,15 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (!isLocalPlayer) return;
         HandleMovement();
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            CmdUpdateSpeed(1);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            CmdUpdateSpeed(-1);
+        }
     }
 
     public void HandleMovement()
@@ -38,6 +47,22 @@ public class PlayerMovement : NetworkBehaviour
             
             if (moveHor != 0 || moveVer != 0) { animator.SetBool("Iswalking", true); }
             else { animator.SetBool("Iswalking", false); }
+            
+            CmdUpdateRotatation(moveHor);
         }
+    }
+
+    [Command]
+    public void CmdUpdateRotatation(float moveHor)
+    {
+        if (moveHor > 0) this.playerBody.transform.rotation = new Quaternion(0, 0, 0, 0);
+        if (moveHor < 0) this.playerBody.transform.rotation = new Quaternion(0, 180, 0, 0);
+    }
+    
+    [Command]
+    public void CmdUpdateSpeed(int value)
+    {
+        GameObject server = GameObject.Find("Server");
+        server.GetComponent<Server>().speed++;
     }
 }

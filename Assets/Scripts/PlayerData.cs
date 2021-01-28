@@ -42,5 +42,4 @@ public class PlayerData : NetworkBehaviour
         if (server == null) { return; }
         speed = server.GetComponent<Server>().speed;
     }
-
 }
